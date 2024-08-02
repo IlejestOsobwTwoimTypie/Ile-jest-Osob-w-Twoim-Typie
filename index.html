@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ile jest Osób w twoim Typie na Świecie?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Ile jest Osób w twoim Typie na Świecie?</h1>
+    <p>Ten Formularz pozwoli Ci obliczyć, na podstawie rzetelnych danych, ile jest osób w twoim typie na całym świecie.<br>
+    Aktualnie na świecie jest 8123516000 ludzi, ilu z nich mieści się w twoich wymaganiach?</p>
+    <form id="typeForm">
+        <label for="gender">1. Jaką ma mieć płeć?</label>
+        <select id="gender" required>
+            <option value="">Wybierz...</option>
+            <option value="0.497">Kobiety</option>
+            <option value="0.501">Mężczyźni</option>
+            <option value="1">Nie ma znaczenia</option>
+        </select>
+
+        <label for="age">2. Jaki ma mieć wiek?</label>
+        <select id="age" required>
+            <option value="">Wybierz...</option>
+            <option value="0.048">15-19 lat</option>
+            <option value="0.092">18-26 lat</option>
+            <option value="0.05">20-24 lata</option>
+            <option value="0.058">25-29 lat</option>
+            <option value="0.18">20-29 lat</option>
+            <option value="0.136">30-39 lata</option>
+            <option value="0.27">30-49 lat</option>
+            <option value="0.137">40-49 lat</option>
+            <option value="0.395">Więcej niż 49 lat</option>
+            <option value="1">Nie ma znaczenia</option>
+        </select>
+
+        <label for="hairType">3. Jaki ma mieć typ włosów?</label>
+        <select id="hairType" required>
+            <option value="">Wybierz...</option>
+            <option value="0.61">Kręcone lub Falowane</option>
+            <option value="0.39">Proste</option>
+            <option value="1">Nie ma znaczenia</option>
+        </select>
+
+        <label for="hairColor">4. Jaki ma mieć kolor włosów?</label>
+        <select id="hairColor" required>
+            <option value="">Wybierz...</option>
+            <option value="0.263">Blond</option>
+            <option value="0.75">Czarne lub Brązowe</option>
+            <option value="0.02">Rudy</option>
+            <option value="1">Nie ma znaczenia</option>
+        </select>
+
+        <label for="language">5. Czy ma mówić po Polsku?</label>
+        <select id="language" required>
+            <option value="">Wybierz...</option>
+            <option value="0.0074">Tak</option>
+            <option value="1">Nie ma znaczenia</option>
+        </select>
+
+        <label for="married">6. Czy może być aktualnie w małżeństwie z kimś innym?</label>
+        <select id="married" required>
+            <option value="">Wybierz...</option>
+            <option value="0.55">Tak</option>
+            <option value="0.45">Nie</option>
+            <option value="1">Nie ma znaczenia</option>
+        </select>
+
+        <label for="eyeColor">7. Jaki ma mieć kolor oczu?</label>
+        <select id="eyeColor" required>
+            <option value="">Wybierz...</option>
+            <option value="0.8">Brązowe lub Piwne</option>
+            <option value="0.1">Niebieskie</option>
+            <option value="0.07">Zielone lub Bursztynowe</option>
+            <option value="0.03">Szare</option>
+            <option value="1">Nie ma znaczenia</option>
+        </select>
+
+        <label for="bodyType">8. Jaką ma mieć sylwetkę?</label>
+        <select id="bodyType" required>
+            <option value="">Wybierz...</option>
+            <option value="0.41">Przeciętną</option>
+            <option value="0.13">Otyłą</option>
+            <option value="0.39">Grubszą</option>
+            <option value="0.05">Umięśnioną</option>
+            <option value="0.14">Szczupłą</option>
+            <option value="1">Nie ma znaczenia</option>
+        </select>
+
+        <label for="height">9. Jaki ma mieć wzrost?</label>
+        <select id="height" required>
+            <option value="">Wybierz...</option>
+            <option value="0.1">Poniżej 150 cm</option>
+            <option value="0.65">140-170 cm</option>
+            <option value="0.3">150-160 cm</option>
+            <option value="0.3">160-170 cm</option>
+            <option value="0.25">170-180 cm</option>
+            <option value="0.1">180-190 cm</option>
+            <option value="0.15">Powyżej 180 cm</option>
+            <option value="0.05">Powyżej 190 cm</option>
+            <option value="1">Nie ma znaczenia</option>
+        </select>
+
+        <label for="income">10. Ile ma zarabiać miesięcznie?</label>
+        <select id="income" required>
+            <option value="">Wybierz...</option>
+            <option value="0.88">Minimum 3000 zł</option>
+            <option value="0.54">Minimum 6000 zł</option>
+            <option value="0.1">Minimum 10000 zł</option>
+            <option value="0.01">Minimum 20000 zł</option>
+            <option value="0.001">Więcej niż 35000 zł</option>
+            <option value="1">Nie ma znaczenia</option>
+        </select>
+
+        <label for="race">11. Jaką ma mieć rasę i kolor skóry?</label>
+        <select id="race" required>
+            <option value="">Wybierz...</option>
+            <option value="0.16">Kaukaska</option>
+            <option value="0.15">Afrykańska</option>
+            <option value="0.6">Azjatycka</option>
+            <option value="0.09">Latynoska</option>
+            <option value="1">Nie ma znaczenia</option>
+        </select>
+
+        <label for="intelligence">12. Jaki ma mieć poziom inteligencji?</label>
+        <select id="intelligence" required>
+            <option value="">Wybierz...</option>
+            <option value="0.136">Niska inteligencja</option>
+            <option value="0.862">Przynajmniej przeciętna inteligencja</option>
+            <option value="0.158">Przynajmniej wysoka inteligencja</option>
+            <option value="0.022">Bardzo wysoka inteligencja</option>
+            <option value="1">Nie ma znaczenia</option>
+        </select>
+
+        <label for="bodycount">13. Jaki ma mieć bodycount?</label>
+        <select id="bodycount" required>
+            <option value="">Wybierz...</option>
+            <option value="0.5">Mniej niż 5 osób</option>
+            <option value="0.7">Mniej niż 10 osób</option>
+            <option value="0.15">10-15 osób</option>
+            <option value="0.08">15-30 osób</option>
+            <option value="0.05">30-50 osób</option>
+            <option value="0.3">Więcej niż 10 osób</option>
+            <option value="0.93">Mniej niż 30 osób</option>
+            <option value="0.98">Mniej niż 50 osób</option>
+            <option value="0.02">Więcej niż 50 osób</option>
+            <option value="1">Nie ma znaczenia</option>
+        </select>
+
+        <label for="compatibility">14. Czy ma być kompatybilność seksualna?</label>
+        <select id="compatibility" required onchange="handleCompatibilityChange()">
+            <option value="">Wybierz...</option>
+            <option value="1">Tak</option>
+            <option value="1">Nie ma znaczenia</option>
+        </select>
+
+        <div id="compatibilitySection" class="hidden">
+            <h2>
+                Kompatybilność Seksualna 
+                <a href="https://forms.gle/9zucCM8k5W7SVy89A" target="_blank">Jeżeli nie wiesz jaki jest twój poziom perwersyjności to możesz sprawdzić w tym teście</a>
+            </h2>
+            <label for="perversity">15. Jaki jest twój poziom perwersyjności?</label>
+            <select id="perversity">
+                <option value="">Wybierz...</option>
+                <option value="0.022">Pruderyjność</option>
+                <option value="0.136">Lekka perwersyjność</option>
+                <option value="0.341">Przeciętna perwersyjność</option>
+                <option value="0.341">Wyższa od przeciętnej perwersyjność</option>
+                <option value="0.136">Wysoka perwersyjność</option>
+                <option value="0.022">Bardzo wysoka perwersyjność</option>
+            </select>
+        </div>
+
+        <button type="button" onclick="calculate()">Oblicz</button>
+    </form>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    function handleCompatibilityChange() {
+        const compatibility = document.getElementById('compatibility').value;
+        const compatibilitySection = document.getElementById('compatibilitySection');
+        if (compatibility === "1") {
+            compatibilitySection.classList.remove('hidden');
+        } else {
+            compatibilitySection.classList.add('hidden');
+        }
+    }
+
+    function calculate() {
+        const form = document.getElementById('typeForm');
+        let product = 1;
+        for (let i = 0; i < form.length; i++) {
+            if (form[i].tagName === 'SELECT' && form[i].value) {
+                product *= parseFloat(form[i].value);
+            }
+        }
+        const population = 8123516000;
+        const result = Math.round(product * population);
+        document.getElementById('result').innerText = `Tyle osób na świecie jest w twoim typie: ${result}`;
+    }
+</script>
+
+</body>
+</html>
